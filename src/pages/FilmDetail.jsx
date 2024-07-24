@@ -41,7 +41,7 @@ export default function FilmDetail() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto flex max-w-2xl flex-col justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
                     <div className="w-full lg:max-w-lg lg:flex-auto">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-customCursive">
                             {film.title}
                         </h2>
                         <p className="mt-6 text-xl leading-8 text-gray-600">
@@ -88,7 +88,7 @@ export default function FilmDetail() {
                         </ul>
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                             <ul className='col-span-2 mt-10'>
-                                <h3 className="text-2xl font-bold mb-4 font-cursive">Characters</h3>
+                                <h3 className="text-2xl font-bold mb-4 font-customCursive">Characters</h3>
                                 {characters.map((character, index) => (
                                     <li key={character.id || index} className="flex items-center space-x-4 mb-2 text-gray-500 font-medium">
                                         {getCharacterImage(character.name) ? (
@@ -105,7 +105,7 @@ export default function FilmDetail() {
                                 ))}
                             </ul>
                             <ul className='col-span-1 mt-10'>
-                                <h3 className="text-2xl font-bold mb-4 font-cursive">Species</h3>
+                                <h3 className="text-2xl font-bold mb-4 font-customCursive">Species</h3>
                                 {species.map((specie, index) => (
                                     <li key={specie.id || index} className="mb-2 text-gray-500 font-medium">
                                         {specie.name ? (
@@ -120,7 +120,7 @@ export default function FilmDetail() {
                             </ul>
                         </div>
                         <ul className='col-span-1 mt-10'>
-                            <h3 className="text-2xl font-bold mb-4 font-cursive">Vehicles</h3>
+                            <h3 className="text-2xl font-bold mb-4 font-customCursive">Vehicles</h3>
                             {vehicles.map((vehicle, index) => (
                                 <li key={vehicle.id || index} className="mb-2 text-gray-500 font-medium">
                                     {vehicle.name ? (

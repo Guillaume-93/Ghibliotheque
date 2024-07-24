@@ -57,7 +57,7 @@ export default function Species() {
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">Species</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-customCursive">Species</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         Discover the different species from Studio Ghibli films and the characters associated with them.
                     </p>
@@ -116,7 +116,7 @@ export default function Species() {
                                     <DialogPanel className="flex flex-col max-w-7xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                         <DialogTitle
                                             as="h3"
-                                            className="text-xl font-bold leading-6 text-gray-900 mb-8 font-cursive"
+                                            className="text-xl font-bold leading-6 text-gray-900 mb-8 font-customCursive"
                                         >
                                             {selectedSpecies?.name} Characters
                                         </DialogTitle>

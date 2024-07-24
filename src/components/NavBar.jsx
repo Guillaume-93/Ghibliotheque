@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 
 const navigation = [
     { name: 'Films', href: '/films' },
-    { name: 'Characters', href: '/peoples' },
     { name: 'Species', href: '/species' },
     { name: 'Vehicles', href: '/vehicles' },
     { name: 'Locations', href: '/locations' },
+    { name: 'Characters', href: '/peoples' },
 ];
 
 export default function NavBar() {
@@ -19,19 +19,19 @@ export default function NavBar() {
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between lg:px-8">
                 <NavLink to="/" className="">
                     <span className="sr-only">Ghibliotheque</span>
-                    <span className='text-3xl xl:text-5xl font-cursive font-bold text-stroke text-[#758A7E]'>Ghibliothèque</span>
+                    <span className='text-3xl xl:text-5xl font-customCursive font-bold text-stroke text-shadow-lg text-[#ffd689]'>Ghibliothèque</span>
                 </NavLink>
                 <div className="flex lg:hidden">
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
                     >
                         <span className="sr-only">Open main menu</span>
                         {mobileMenuOpen ? (
                             <Bars3Icon aria-hidden="true" className="hidden" />
                         ) : (
-                            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+                            <Bars3Icon aria-hidden="true" className="h-6 w-6 text-[#eccb8e]" />
                         )}
                     </button>
                 </div>
@@ -40,7 +40,7 @@ export default function NavBar() {
                         <NavLink
                             key={item.name}
                             to={item.href}
-                            className={({ isActive }) => `font-cursive font-medium bg-[#758A7E] rounded-md px-3 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
+                            className={({ isActive }) => `font-medium bg-[#7d9c95] rounded-md px-3 shadow-3xl ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
                         >
                             {item.name}
                         </NavLink>
@@ -49,11 +49,11 @@ export default function NavBar() {
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-10" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#5D7974] bg-opacity-95 px-4 py-3 sm:max-w-[15em] sm:ring-1 sm:ring-gray-900/10">
+                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#6B8780] bg-opacity-95 px-4 py-3 sm:max-w-[15em] sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <NavLink to="/" className="">
                             <span className="sr-only">Ghibliotheque</span>
-                            <span className='text-3xl xl:text-5xl font-cursive font-bold text-stroke text-[#758A7E] sm:hidden'>Ghibliothèque</span>
+                            <span className='text-3xl xl:text-5xl font-customCursive font-bold text-stroke text-shadow-lg text-[#ffd689] sm:hidden'>Ghibliothèque</span>
                         </NavLink>
                         <button
                             type="button"
@@ -71,8 +71,7 @@ export default function NavBar() {
                                     <NavLink
                                         key={item.name}
                                         to={item.href}
-                                        className={({ isActive }) => `font-cursive font-medium text-2xl sm:text-xl bg-[#758A7E] rounded-md px-6 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
-                                        onClick={() => setMobileMenuOpen(false)}
+                                        className={({ isActive }) => `bg-[#7d9c95] rounded-md px-3 shadow-3xl text-xl ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
                                     >
                                         {item.name}
                                     </NavLink>

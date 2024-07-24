@@ -70,7 +70,7 @@ body {
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 .div-shadow {

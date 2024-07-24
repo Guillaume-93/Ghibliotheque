@@ -11,7 +11,7 @@ export default function Loader() {
                 <line x1="32" y1="128" x2="64" y2="128" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
                 <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
             </svg>
-            <span className="loading-text font-cursive">Loading...</span>
+            <span className="loading-text font-customCursive">Loading...</span>
         </div>
     );
 }

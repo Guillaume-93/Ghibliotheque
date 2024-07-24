@@ -1,0 +1,10 @@
+# Global settings
+User-agent: *
+Allow: /
+
+# Disallow specific paths (if any)
+# Disallow: /private/
+# Disallow: /tmp/
+
+# Sitemap location
+Sitemap: https://ghibliotheque.netlify.app/sitemap.xml
