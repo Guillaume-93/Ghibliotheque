@@ -1,6 +1,7 @@
 @import '../styles/reset.css';
 @import '../styles/variables.css';
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto&family=Inknut+Antiqua&family=Raleway&family=Kanit&family=Open+Sans&family=Lato&family=Montserrat&family=Playfair+Display&family=Merriweather&family=Ubuntu&family=Oswald&family=Poppins&family=Nunito&display=swap');
+
 
 @tailwind base;
 @tailwind components;
