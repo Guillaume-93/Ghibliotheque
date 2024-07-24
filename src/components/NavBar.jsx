@@ -40,7 +40,7 @@ export default function NavBar() {
                         <NavLink
                             key={item.name}
                             to={item.href}
-                            className={({ isActive }) => `font-medium bg-[#7d9c95] rounded-md px-3 shadow-3xl ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
+                            className={({ isActive }) => `font-medium bg-[#7d9c95] rounded-md px-3 shadow-3xl font-permanentMarker ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
                         >
                             {item.name}
                         </NavLink>
@@ -61,7 +61,7 @@ export default function NavBar() {
                             className="-m-2.5 rounded-md p-2.5 text-white"
                         >
                             <span className="sr-only">Close menu</span>
-                            <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                            <XMarkIcon aria-hidden="true" className="h-6 w-6 text-[#ffd689]" />
                         </button>
                     </div>
                     <div className="mt-16 flow-root">
@@ -71,7 +71,7 @@ export default function NavBar() {
                                     <NavLink
                                         key={item.name}
                                         to={item.href}
-                                        className={({ isActive }) => `font-medium bg-[#7d9c95] rounded-md px-3 shadow-3xl ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
+                                        className={({ isActive }) => `font-medium bg-[#7d9c95] rounded-md px-3 shadow-3xl font-permanentMarker ${isActive ? 'text-black ring-1 ring-black bg-[#ffd689]' : 'text-black ring-1 ring-black'}`}
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
