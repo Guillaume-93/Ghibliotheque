@@ -56,7 +56,8 @@ export default function Films() {
                             </div>
                         ) : (
                             <>
-                                <div className='bg-[#7d9c95] lg:rounded-lg ring-2 ring-[#4E706D]'>
+                                <div className='relative  lg:rounded-lg '>
+                                <div className='absolute inset-0 bg-cover bg-right filter blur-md z-0' style={{ backgroundImage: `url("/images/backgroundImage/Ghibliotheque-Wallpaper.webp")` }}></div>
                                     <Marquee className="h-68 w-full p-8 mt-20" repeat={1}>
                                         {renderFilms(films)}
                                     </Marquee>
