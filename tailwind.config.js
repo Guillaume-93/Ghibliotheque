@@ -32,7 +32,18 @@ module.exports = {
         greatVibes: ['"Great Vibes"', 'cursive'],
         raleway: ['"Raleway"', 'sans-serif'],
         kanit: ['"Kanit"', 'sans-serif'],
-      },
+        openSans: ['"Open Sans"', 'sans-serif'],
+        lato: ['"Lato"', 'sans-serif'],
+        montserrat: ['"Montserrat"', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+        merriweather: ['"Merriweather"', 'serif'],
+        ubuntu: ['"Ubuntu"', 'sans-serif'],
+        oswald: ['"Oswald"', 'sans-serif'],
+        poppins: ['"Poppins"', 'sans-serif'],
+        nunito: ['"Nunito"', 'sans-serif'],
+        cursive: ['cursive'],
+      }
+      
     },
   },
   plugins: [

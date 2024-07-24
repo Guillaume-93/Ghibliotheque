@@ -19,7 +19,7 @@ export default function NavBar() {
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between lg:px-8">
                 <NavLink to="/" className="">
                     <span className="sr-only">Ghibliotheque</span>
-                    <span className='text-3xl xl:text-5xl font-greatVibes font-bold text-stroke text-[#758A7E]'>Ghibliothèque</span>
+                    <span className='text-3xl xl:text-5xl font-cursive font-bold text-stroke text-[#758A7E]'>Ghibliothèque</span>
                 </NavLink>
                 <div className="flex lg:hidden">
                     <button
@@ -40,7 +40,7 @@ export default function NavBar() {
                         <NavLink
                             key={item.name}
                             to={item.href}
-                            className={({ isActive }) => `font-greatVibes font-medium bg-[#758A7E] rounded-md px-3 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
+                            className={({ isActive }) => `font-cursive font-medium bg-[#758A7E] rounded-md px-3 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
                         >
                             {item.name}
                         </NavLink>
@@ -53,7 +53,7 @@ export default function NavBar() {
                     <div className="flex items-center justify-between">
                         <NavLink to="/" className="">
                             <span className="sr-only">Ghibliotheque</span>
-                            <span className='text-3xl xl:text-5xl font-greatVibes font-bold text-stroke text-[#758A7E] sm:hidden'>Ghibliothèque</span>
+                            <span className='text-3xl xl:text-5xl font-cursive font-bold text-stroke text-[#758A7E] sm:hidden'>Ghibliothèque</span>
                         </NavLink>
                         <button
                             type="button"
@@ -66,12 +66,12 @@ export default function NavBar() {
                     </div>
                     <div className="mt-16 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="space-y-4 py-6 flex flex-col items-center">
+                            <div className="space-y-8 py-10 md: flex flex-col items-center">
                                 {navigation.map((item) => (
                                     <NavLink
                                         key={item.name}
                                         to={item.href}
-                                        className={({ isActive }) => `font-greatVibes font-medium bg-[#758A7E] rounded-md px-3 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
+                                        className={({ isActive }) => `font-cursive font-medium text-2xl sm:text-xl bg-[#758A7E] rounded-md px-6 shadow-3xl ${isActive ? 'text-white ring-2 ring-white' : 'text-white'}`}
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}

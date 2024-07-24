@@ -31,7 +31,7 @@ export default function Peoples() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-greatVibes">Characters</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">Characters</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         Discover beloved characters from Studio Ghibli films. Click on a movie title to learn about the stories and adventures that have captivated audiences around the world. Use the quick search bar to find a specific character.
                     </p>
@@ -43,7 +43,7 @@ export default function Peoples() {
                 ) : (
                     <>
                         <div className="mt-12">
-                            <label htmlFor="search" className="block text-xl sm:text-2xl font-bold leading-6 text-gray-900 font-greatVibes">
+                            <label htmlFor="search" className="block text-xl sm:text-2xl font-bold leading-6 text-gray-900 font-cursive">
                                 Quick search
                             </label>
                             <div className="relative mt-2 flex items-center">

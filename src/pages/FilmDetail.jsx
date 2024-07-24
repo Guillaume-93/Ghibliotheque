@@ -41,7 +41,7 @@ export default function FilmDetail() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto flex max-w-2xl flex-col justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
                     <div className="w-full lg:max-w-lg lg:flex-auto">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-greatVibes">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">
                             {film.title}
                         </h2>
                         <p className="mt-6 text-xl leading-8 text-gray-600">
@@ -62,7 +62,7 @@ export default function FilmDetail() {
                                 <dd className="mt-2 text-gray-500">{film.original_title_romanised}</dd>
                                 <dt className="text-gray-900 font-bold mt-4">Director</dt>
                                 <dd className="mt-2 text-indigo-600">
-                                    <a href={`https://fr.wikipedia.org/wiki/${film.director}`} target='_blank' className='flex gap-2'>
+                                    <a href={`https://fr.wikipedia.org/wiki/${film.director}`} target='_blank' className='inline-flex gap-2'>
                                         {film.director}
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -71,7 +71,7 @@ export default function FilmDetail() {
                                 </dd>
                                 <dt className="text-gray-900 font-bold mt-4">Producer</dt>
                                 <dd className="mt-2 text-indigo-600">
-                                    <a href={`https://fr.wikipedia.org/wiki/${film.producer}`} target='_blank' className='flex gap-2'>
+                                    <a href={`https://fr.wikipedia.org/wiki/${film.producer}`} target='_blank' className='inline-flex gap-2'>
                                         {film.producer}
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -88,7 +88,7 @@ export default function FilmDetail() {
                         </ul>
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                             <ul className='col-span-2 mt-10'>
-                                <h3 className="text-2xl font-bold mb-4 font-greatVibes">Characters</h3>
+                                <h3 className="text-2xl font-bold mb-4 font-cursive">Characters</h3>
                                 {characters.map((character, index) => (
                                     <li key={character.id || index} className="flex items-center space-x-4 mb-2 text-gray-500 font-medium">
                                         {getCharacterImage(character.name) ? (
@@ -105,7 +105,7 @@ export default function FilmDetail() {
                                 ))}
                             </ul>
                             <ul className='col-span-1 mt-10'>
-                                <h3 className="text-2xl font-bold mb-4 font-greatVibes">Species</h3>
+                                <h3 className="text-2xl font-bold mb-4 font-cursive">Species</h3>
                                 {species.map((specie, index) => (
                                     <li key={specie.id || index} className="mb-2 text-gray-500 font-medium">
                                         {specie.name ? (
@@ -120,7 +120,7 @@ export default function FilmDetail() {
                             </ul>
                         </div>
                         <ul className='col-span-1 mt-10'>
-                            <h3 className="text-2xl font-bold mb-4 font-greatVibes">Vehicles</h3>
+                            <h3 className="text-2xl font-bold mb-4 font-cursive">Vehicles</h3>
                             {vehicles.map((vehicle, index) => (
                                 <li key={vehicle.id || index} className="mb-2 text-gray-500 font-medium">
                                     {vehicle.name ? (

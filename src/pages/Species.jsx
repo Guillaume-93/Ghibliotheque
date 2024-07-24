@@ -1,4 +1,4 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -57,7 +57,7 @@ export default function Species() {
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-greatVibes">Species</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">Species</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         Discover the different species from Studio Ghibli films and the characters associated with them.
                     </p>
@@ -90,7 +90,7 @@ export default function Species() {
 
                 <Transition appear show={isDialogOpen} as={Fragment}>
                     <Dialog as="div" className="relative z-10" onClose={closeModal}>
-                        <Transition.Child
+                        <TransitionChild
                             as={Fragment}
                             enter="ease-out duration-300"
                             enterFrom="opacity-0"
@@ -100,11 +100,11 @@ export default function Species() {
                             leaveTo="opacity-0"
                         >
                             <div className="fixed inset-0 bg-black bg-opacity-25" />
-                        </Transition.Child>
+                        </TransitionChild>
 
                         <div className="fixed inset-0 overflow-y-auto">
                             <div className="flex min-h-full items-center justify-center p-4 text-center">
-                                <Transition.Child
+                                <TransitionChild
                                     as={Fragment}
                                     enter="ease-out duration-300"
                                     enterFrom="opacity-0 scale-95"
@@ -113,13 +113,13 @@ export default function Species() {
                                     leaveFrom="opacity-100 scale-100"
                                     leaveTo="opacity-0 scale-95"
                                 >
-                                    <Dialog.Panel className="flex flex-col max-w-7xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                        <Dialog.Title
+                                    <DialogPanel className="flex flex-col max-w-7xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                        <DialogTitle
                                             as="h3"
-                                            className="text-xl font-bold leading-6 text-gray-900 mb-8 font-greatVibes"
+                                            className="text-xl font-bold leading-6 text-gray-900 mb-8 font-cursive"
                                         >
                                             {selectedSpecies?.name} Characters
-                                        </Dialog.Title>
+                                        </DialogTitle>
                                         <div className="mt-2 flex">
                                             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                                                 {selectedSpecies?.characters.map((character) => (
@@ -167,8 +167,8 @@ export default function Species() {
                                                 Close
                                             </button>
                                         </div>
-                                    </Dialog.Panel>
-                                </Transition.Child>
+                                    </DialogPanel>
+                                </TransitionChild>
                             </div>
                         </div>
                     </Dialog>

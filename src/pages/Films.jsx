@@ -44,7 +44,7 @@ export default function Films() {
             <div className="bg-white py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0 text-left px-6 md:px-0">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-greatVibes">Films</h2>
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-cursive">Films</h2>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
                             Explore iconic Studio Ghibli films. Click on the image of a film to discover its story and details. Use the quick search bar to find a specific movie.
                         </p>
@@ -66,7 +66,7 @@ export default function Films() {
                                 </div>
                                 <div className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-0">
                                     <div className="mt-12">
-                                        <label htmlFor="search" className="block text-xl sm:text-2xl font-bold leading-6 text-gray-900 font-greatVibes">
+                                        <label htmlFor="search" className="block text-xl sm:text-2xl font-bold leading-6 text-gray-900 font-cursive">
                                             Quick search
                                         </label>
                                         <div className="relative mt-2 flex items-center">

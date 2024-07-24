@@ -33,7 +33,10 @@ export const fetchSpecies = createAsyncThunk('species/fetchSpecies', async () =>
         };
     });
 
-    return await Promise.all(speciesPromises);
+    const detailedSpecies = await Promise.all(speciesPromises);
+
+    // Trier les espèces par ordre alphabétique avant de les retourner
+    return detailedSpecies.sort((a, b) => a.name.localeCompare(b.name));
 });
 
 const speciesSlice = createSlice({
