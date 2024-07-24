@@ -19,7 +19,7 @@ export default function NavBar() {
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between lg:px-8">
                 <NavLink to="/" className="">
                     <span className="sr-only">Ghibliotheque</span>
-                    <span className='text-3xl xl:text-5xl font-customCursive font-bold text-stroke text-shadow-lg text-[#ffd689]'>Ghibliothèque</span>
+                    <span className='text-3xl xl:text-5xl font-permanentMarker font-bold text-stroke text-shadow-lg text-[#ffd689]'>Ghibliothèque</span>
                 </NavLink>
                 <div className="flex lg:hidden">
                     <button
@@ -53,7 +53,7 @@ export default function NavBar() {
                     <div className="flex items-center justify-between">
                         <NavLink to="/" className="">
                             <span className="sr-only">Ghibliotheque</span>
-                            <span className='text-3xl xl:text-5xl font-customCursive font-bold text-stroke text-shadow-lg text-[#ffd689] sm:hidden'>Ghibliothèque</span>
+                            <span className='text-3xl xl:text-5xl font-permanentMarker font-bold text-stroke text-shadow-lg text-[#ffd689] sm:hidden'>Ghibliothèque</span>
                         </NavLink>
                         <button
                             type="button"
