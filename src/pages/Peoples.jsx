@@ -61,18 +61,19 @@ export default function Peoples() {
                                     </svg>
                                 </div>
                             </div>
-                        </div><ul
+                        </div>
+                        <ul
                             role="list"
                             className="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
                         >
                             {filteredCharacters.map((person) => (
                                 <li key={person.id} className='flex flex-col items-center'>
-                                    <div className="w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#4E706D] p-0.5">
+                                    <div className="w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#4E706D] p-1">
                                         <img
                                             alt={person.name}
                                             src={getCharacterImage(person.name)}
                                             onError={(e) => { e.target.onerror = null; e.target.src = '/images/characters/default.jpg'; }}
-                                            className="object-cover object-top w-full h-full rounded-full" />
+                                            className="object-cover object-top w-full h-full rounded-full ring-2 ring-[#4E706D]" />
                                     </div>
                                     <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                                     <ul className="text-sm leading-6 text-gray-600">

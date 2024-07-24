@@ -56,7 +56,7 @@ export default function Films() {
                             </div>
                         ) : (
                             <>
-                                <div className='backdrop-filter backdrop-blur-lg bg-[#6B8780] lg:rounded-lg'>
+                                <div className='bg-[#7d9c95] lg:rounded-lg ring-2 ring-[#4E706D]'>
                                     <Marquee className="h-68 w-full p-8 mt-20" repeat={1}>
                                         {renderFilms(films)}
                                     </Marquee>

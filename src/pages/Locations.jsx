@@ -44,16 +44,16 @@ export default function Locations() {
                         className="mx-auto mt-20 grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
                     >
                         {locations.map((location) => (
-                            <li key={location.id} className='flex flex-col items-center'>
-                                <div className="w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 overflow-hidden ring-2 ring-[#4E706D] p-0.5 rounded-full">
+                            <li key={location.id} className='flex flex-col items-center bg-[#7d9c95] py-6 rounded-lg ring-2 ring-[#4E706D]'>
+                                <div className="w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 overflow-hidden ring-2 ring-[#4E706D] p-1 rounded-full bg-white">
                                     <img
                                         alt={location.name}
                                         src={getLocationImage(location.name)}
                                         onError={(e) => { e.target.onerror = null; e.target.src = '/images/locations/default.jpg'; }}
-                                        className="object-cover object-top w-full h-full rounded-full" />
+                                        className="object-cover object-top w-full h-full rounded-full ring-2 ring-[#4E706D]" />
                                 </div>
                                 <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{location.name}</h3>
-                                <ul className="text-sm leading-6 text-gray-600 mt-2 text-center">
+                                <ul className="text-sm leading-6 text-gray-800 mt-2 text-center">
                                     <li>Climate: {location.climate !== 'TODO' ? location.climate : 'N/A'}</li>
                                     <li>Terrain: {location.terrain !== 'TODO' ? location.terrain : 'N/A'}</li>
                                     <li>Surface Water: {location.surface_water || 'N/A'}</li>
@@ -62,11 +62,11 @@ export default function Locations() {
                                         {location.residents.length > 0 ? (
                                             location.residents.map((resident) => (
                                                 <li key={resident.id} className="flex items-center space-x-4">
-                                                    <div className='w-10 h-10 rounded-full overflow-hidden'>
+                                                    <div className='w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#4E706D] p-1 bg-white'>
                                                         <img
                                                             src={getCharacterImage(resident.name)}
                                                             alt={resident.name}
-                                                            className="object-cover object-top w-full h-full"
+                                                            className="object-cover object-top w-full h-full rounded-full ring-2 ring-[#4E706D]"
                                                         />
                                                     </div>
                                                     <p>{resident.name}</p>
@@ -81,7 +81,7 @@ export default function Locations() {
                                         {location.films.length > 0 ? (
                                             location.films.map((film) => (
                                                 <li key={film.id}>
-                                                    <Link to={`/films/${film.id}`} className="text-[#9F5C31] hover:text-[#2e4b48]">
+                                                    <Link to={`/films/${film.id}`} className="text-[#ffd689] hover:text-[#2e4b48]">
                                                         {film.title}
                                                     </Link>
                                                 </li>

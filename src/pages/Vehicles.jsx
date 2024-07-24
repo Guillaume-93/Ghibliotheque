@@ -41,17 +41,17 @@ export default function Vehicles() {
                         className="mx-auto mt-20 grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
                     >
                         {vehicles.map((vehicle) => (
-                            <li key={vehicle.id} className='flex flex-col items-center'>
-                                <div className="w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 overflow-hidden ring-2 ring-[#4E706D] p-0.5 rounded-full">
+                            <li key={vehicle.id} className='flex flex-col items-center bg-[#7d9c95] py-6 px-6 rounded-lg ring-2 ring-[#4E706D]'>
+                                <div className="w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 overflow-hidden ring-2 ring-[#4E706D] p-1 rounded-full bg-white">
                                     <img
                                         alt={vehicle.name}
                                         src={getVehicleImage(vehicle.name)}
                                         onError={(e) => { e.target.onerror = null; e.target.src = '/images/vehicles/default.jpg'; }}
-                                        className="object-cover object-top w-full h-full rounded-full" />
+                                        className="object-cover object-top w-full h-full rounded-full ring-2 ring-[#4E706D]" />
                                 </div>
                                 <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{vehicle.name}</h3>
-                                <p className="mt-2 text-sm leading-6 text-gray-600 text-center">{vehicle.description}</p>
-                                <ul className="text-sm leading-6 text-gray-600 mt-2">
+                                <p className="mt-2 text-sm leading-6 text-gray-800 text-center">{vehicle.description}</p>
+                                <ul className="text-sm leading-6 text-gray-800 mt-2">
                                     <li>Class: {vehicle.vehicle_class}</li>
                                     <li>Length: {vehicle.length}</li>
                                     <li>Pilot: {vehicle.pilot.name}</li>
