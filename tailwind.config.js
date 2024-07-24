@@ -26,6 +26,7 @@ module.exports = {
         poppins: ['"Poppins"', 'sans-serif'],
         nunito: ['"Nunito"', 'sans-serif'],
         customCursive: ['cursive'],
+        permanentMarker: ['"Permanent Marker"', 'cursive'],
       }
     },
   },
