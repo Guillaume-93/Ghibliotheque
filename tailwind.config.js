@@ -14,7 +14,6 @@ module.exports = {
         lilita: ['Lilita One', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         inknut: ['"Inknut Antiqua"', 'serif'],
-        greatVibes: ['"Great Vibes"', 'cursive'],
         raleway: ['"Raleway"', 'sans-serif'],
         kanit: ['"Kanit"', 'sans-serif'],
         openSans: ['"Open Sans"', 'sans-serif'],
