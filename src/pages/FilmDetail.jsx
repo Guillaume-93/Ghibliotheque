@@ -25,8 +25,6 @@ export default function FilmDetail() {
         return `/images/characters/${formattedName}.jpg`;
     };
 
-    const customBannerUrl = '/images/banner/castle-in-the-sky.webp';
-
     if (!film) {
         return <div className="text-center text-gray-700 text-lg mt-10">Film not found</div>;
     }
@@ -49,7 +47,7 @@ export default function FilmDetail() {
                         </p>
                         <img
                             alt="Film Banner"
-                            src={film.title === "Castle in the Sky" ? customBannerUrl : film.movie_banner}
+                            src={film.movie_banner}
                             className="mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
                         />
                     </div>
