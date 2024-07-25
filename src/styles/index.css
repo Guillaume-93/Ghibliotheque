@@ -71,6 +71,10 @@ body {
   text-shadow: 4px 4px 6px rgb(0, 0, 0);
 }
 
+.text-shadow-lg-white {
+  text-shadow: 4px 4px 4px rgb(255, 255, 255);
+}
+
 .text-stroke {
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
