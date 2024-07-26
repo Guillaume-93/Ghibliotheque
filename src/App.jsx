@@ -8,6 +8,7 @@ import Peoples from './pages/Peoples';
 import Species from './pages/Species';
 import Vehicles from './pages/Vehicles';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/locations" element={<Locations />} />
         </Routes>
+        <Footer />
       </main>
     </>
   );
