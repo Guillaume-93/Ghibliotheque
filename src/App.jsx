@@ -9,6 +9,7 @@ import Species from './pages/Species';
 import Vehicles from './pages/Vehicles';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import Footer from './components/Footer.jsx';
+import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 
 function App() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
     <ScrollToTop />
+    <ScrollToTopButton />
       <main>
         {showNavBar && <NavBar />}
         <Routes>
