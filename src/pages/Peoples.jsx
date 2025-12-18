@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import { fetchPeoples } from '../store/slices/peopleSlice';
 
 export default function Peoples() {
     const dispatch = useDispatch();
     const { peoples } = useSelector((state) => state.people);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
     const loading = useSelector((state) => state.people.status) === 'loading';
 
     useEffect(() => {
@@ -25,6 +26,15 @@ export default function Peoples() {
         const formattedName = characterName.split(' ').join('-');
         return `/images/characters/${formattedName}.jpg`;
     };
+
+    useEffect(() => {
+        // Mettre à jour l'URL quand searchTerm change
+        if (searchTerm) {
+            setSearchParams({ search: searchTerm });
+        } else {
+            setSearchParams({});
+        }
+    }, [searchTerm, setSearchParams]);
 
     const handleSearchChange = (e) => {
         const value = e.target.value;

@@ -91,7 +91,11 @@ export default function FilmDetail() {
                                         <li key={character.id || index} className="flex items-center space-x-4 mb-2 text-gray-500 font-medium">
                                             {getCharacterImage(character.name) ? (
                                                 <>
-                                                    <Link to={`/people`} className="w-10 h-10 rounded-full overflow-hidden">
+                                                    <Link 
+                                                        to={`/peoples?search=${encodeURIComponent(character.name)}`}
+                                                        className="w-10 h-10 rounded-full overflow-hidden hover:ring-2 hover:ring-ghibli-darkblue transition-all"
+                                                        title={`Voir ${character.name}`}
+                                                    >
                                                         <img src={getCharacterImage(character.name)} alt={character.name} className="object-cover object-top w-full h-full" />
                                                     </Link>
                                                     <p>{character.name}</p>

@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-    <ScrollToTop />
-    <ScrollToTopButton />
+      <ScrollToTop />
+      <ScrollToTopButton />
       <main>
         {showNavBar && <NavBar />}
         <Routes>
